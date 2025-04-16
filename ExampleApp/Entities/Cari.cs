@@ -5,8 +5,6 @@ namespace ExampleApp.Entities
     public class Cari : BaseEntity
     {
         public string FullName { get; set; } = default!;
-        public string Username { get; set; } = default!;
-        public string Password { get; set; } = default!;
         public int TCNo { get; set; } = default!;
         public string Phone { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;

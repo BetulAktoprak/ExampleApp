@@ -29,6 +29,7 @@ partial class LoginForm
     private void InitializeComponent()
     {
         panel1 = new Panel();
+        btnRegister = new Button();
         label2 = new Label();
         label1 = new Label();
         btnLogin = new Button();
@@ -39,39 +40,52 @@ partial class LoginForm
         // 
         // panel1
         // 
+        panel1.Controls.Add(btnRegister);
         panel1.Controls.Add(label2);
         panel1.Controls.Add(label1);
         panel1.Controls.Add(btnLogin);
         panel1.Controls.Add(txtPassword);
         panel1.Controls.Add(txtUsername);
-        panel1.Location = new Point(239, 123);
+        panel1.Location = new Point(273, 164);
+        panel1.Margin = new Padding(3, 4, 3, 4);
         panel1.Name = "panel1";
-        panel1.Size = new Size(573, 233);
+        panel1.Size = new Size(655, 311);
         panel1.TabIndex = 0;
+        // 
+        // btnRegister
+        // 
+        btnRegister.Location = new Point(383, 38);
+        btnRegister.Name = "btnRegister";
+        btnRegister.Size = new Size(94, 29);
+        btnRegister.TabIndex = 3;
+        btnRegister.Text = "Kayıt Ol";
+        btnRegister.UseVisualStyleBackColor = true;
+        btnRegister.Click += btnRegister_Click;
         // 
         // label2
         // 
         label2.AutoSize = true;
-        label2.Location = new Point(156, 119);
+        label2.Location = new Point(178, 159);
         label2.Name = "label2";
-        label2.Size = new Size(33, 15);
+        label2.Size = new Size(42, 20);
         label2.TabIndex = 2;
         label2.Text = "Şifre:";
         // 
         // label1
         // 
         label1.AutoSize = true;
-        label1.Location = new Point(113, 73);
+        label1.Location = new Point(129, 97);
         label1.Name = "label1";
-        label1.Size = new Size(76, 15);
+        label1.Size = new Size(95, 20);
         label1.TabIndex = 2;
         label1.Text = "Kullanıcı Adı:";
         // 
         // btnLogin
         // 
-        btnLogin.Location = new Point(252, 166);
+        btnLogin.Location = new Point(288, 221);
+        btnLogin.Margin = new Padding(3, 4, 3, 4);
         btnLogin.Name = "btnLogin";
-        btnLogin.Size = new Size(111, 31);
+        btnLogin.Size = new Size(127, 41);
         btnLogin.TabIndex = 1;
         btnLogin.Text = "Giriş Yap";
         btnLogin.UseVisualStyleBackColor = true;
@@ -79,26 +93,30 @@ partial class LoginForm
         // 
         // txtPassword
         // 
-        txtPassword.Location = new Point(215, 111);
+        txtPassword.Location = new Point(246, 148);
+        txtPassword.Margin = new Padding(3, 4, 3, 4);
         txtPassword.Name = "txtPassword";
-        txtPassword.Size = new Size(203, 23);
+        txtPassword.Size = new Size(231, 27);
         txtPassword.TabIndex = 0;
         // 
         // txtUsername
         // 
-        txtUsername.Location = new Point(215, 65);
+        txtUsername.Location = new Point(246, 87);
+        txtUsername.Margin = new Padding(3, 4, 3, 4);
         txtUsername.Name = "txtUsername";
-        txtUsername.Size = new Size(203, 23);
+        txtUsername.Size = new Size(231, 27);
         txtUsername.TabIndex = 0;
         // 
         // LoginForm
         // 
-        AutoScaleDimensions = new SizeF(7F, 15F);
+        AutoScaleDimensions = new SizeF(8F, 20F);
         AutoScaleMode = AutoScaleMode.Font;
-        ClientSize = new Size(1151, 637);
+        ClientSize = new Size(1315, 849);
         Controls.Add(panel1);
+        Margin = new Padding(3, 4, 3, 4);
         Name = "LoginForm";
         Text = "LoginForm";
+        Load += LoginForm_Load;
         panel1.ResumeLayout(false);
         panel1.PerformLayout();
         ResumeLayout(false);
@@ -112,4 +130,5 @@ partial class LoginForm
     private Button btnLogin;
     private TextBox txtPassword;
     private TextBox txtUsername;
+    private Button btnRegister;
 }

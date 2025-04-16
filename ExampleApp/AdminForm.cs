@@ -1,5 +1,6 @@
 ﻿using ExampleApp.Context;
 using ExampleProject;
+using Microsoft.EntityFrameworkCore;
 
 namespace ExampleApp
 {
@@ -15,7 +16,23 @@ namespace ExampleApp
             LoadProducts();
             using (var context = new AppDbContext())
             {
-                var cariList = context.Caris.ToList();
+                var cariList = context.Caris.Include(c => c.Orders)
+                    .ThenInclude(o => o.OrderDetails)
+                    .ThenInclude(od => od.Product)
+                    .Select(c => new
+                    {
+                        c.TCNo,
+                        c.FullName,
+                        c.Email,
+                        c.Phone,
+                        c.CreatedDate,
+                        Products = string.Join(", ",
+                            c.Orders
+                             .SelectMany(o => o.OrderDetails)
+                             .Select(od => od.Product.ProductName)
+                             .Distinct()
+                )
+                    }).ToList();
                 dataGridView2.DataSource = cariList;
             }
         }
@@ -92,7 +109,7 @@ namespace ExampleApp
                     p.Id,
                     p.ProductName,
                     p.Barcode,
-                    p.UnitPrice,
+                    UnitPrice = p.UnitPrice.ToString("N2"),
                     p.Stock,
                     p.CreatedDate
                 }).ToList();
@@ -172,6 +189,11 @@ namespace ExampleApp
                     }
                 }
             }
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

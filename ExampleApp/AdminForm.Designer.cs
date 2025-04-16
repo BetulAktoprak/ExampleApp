@@ -51,10 +51,9 @@
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(277, 308);
-            btnSave.Margin = new Padding(3, 2, 3, 2);
+            btnSave.Location = new Point(317, 411);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(104, 26);
+            btnSave.Size = new Size(119, 35);
             btnSave.TabIndex = 23;
             btnSave.Text = "Kaydet";
             btnSave.UseVisualStyleBackColor = true;
@@ -62,61 +61,59 @@
             // 
             // nmrUnitPrice
             // 
-            nmrUnitPrice.Location = new Point(191, 174);
-            nmrUnitPrice.Margin = new Padding(3, 2, 3, 2);
+            nmrUnitPrice.Location = new Point(218, 232);
+            nmrUnitPrice.Maximum = new decimal(new int[] { 100000000, 0, 0, 0 });
             nmrUnitPrice.Name = "nmrUnitPrice";
-            nmrUnitPrice.Size = new Size(131, 23);
+            nmrUnitPrice.Size = new Size(150, 27);
             nmrUnitPrice.TabIndex = 22;
             // 
             // nmrStock
             // 
-            nmrStock.Location = new Point(191, 205);
-            nmrStock.Margin = new Padding(3, 2, 3, 2);
+            nmrStock.Location = new Point(218, 273);
+            nmrStock.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
             nmrStock.Name = "nmrStock";
-            nmrStock.Size = new Size(131, 23);
+            nmrStock.Size = new Size(150, 27);
             nmrStock.TabIndex = 21;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(68, 174);
+            label7.Location = new Point(78, 232);
             label7.Name = "label7";
-            label7.Size = new Size(68, 15);
+            label7.Size = new Size(84, 20);
             label7.TabIndex = 12;
             label7.Text = "Ürün fiyatı :";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(68, 210);
+            label5.Location = new Point(78, 280);
             label5.Name = "label5";
-            label5.Size = new Size(73, 15);
+            label5.Size = new Size(91, 20);
             label5.TabIndex = 14;
             label5.Text = "Stok miktarı:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(68, 147);
+            label2.Location = new Point(78, 196);
             label2.Name = "label2";
-            label2.Size = new Size(55, 15);
+            label2.Size = new Size(68, 20);
             label2.TabIndex = 16;
             label2.Text = "Ürün adı:";
             // 
             // txtAd
             // 
-            txtAd.Location = new Point(191, 142);
-            txtAd.Margin = new Padding(3, 2, 3, 2);
+            txtAd.Location = new Point(218, 189);
             txtAd.Name = "txtAd";
-            txtAd.Size = new Size(190, 23);
+            txtAd.Size = new Size(217, 27);
             txtAd.TabIndex = 10;
             // 
             // button1
             // 
-            button1.Location = new Point(68, 251);
-            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Location = new Point(78, 335);
             button1.Name = "button1";
-            button1.Size = new Size(99, 22);
+            button1.Size = new Size(113, 29);
             button1.TabIndex = 25;
             button1.Text = "Barkod Oluştur";
             button1.UseVisualStyleBackColor = true;
@@ -125,28 +122,28 @@
             // lblBarcode
             // 
             lblBarcode.AutoSize = true;
-            lblBarcode.Location = new Point(238, 258);
+            lblBarcode.Location = new Point(272, 344);
             lblBarcode.Name = "lblBarcode";
-            lblBarcode.Size = new Size(0, 15);
+            lblBarcode.Size = new Size(0, 20);
             lblBarcode.TabIndex = 26;
             // 
             // dataGridView1
             // 
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(419, 62);
-            dataGridView1.Margin = new Padding(3, 2, 3, 2);
+            dataGridView1.Location = new Point(28, 563);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(543, 280);
+            dataGridView1.Size = new Size(1418, 330);
             dataGridView1.TabIndex = 27;
             dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
             // 
             // btnUpdate
             // 
-            btnUpdate.Location = new Point(178, 308);
-            btnUpdate.Margin = new Padding(3, 2, 3, 2);
+            btnUpdate.Location = new Point(203, 411);
             btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(93, 26);
+            btnUpdate.Size = new Size(106, 35);
             btnUpdate.TabIndex = 23;
             btnUpdate.Text = "Güncelle";
             btnUpdate.UseVisualStyleBackColor = true;
@@ -155,17 +152,18 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(126, 87);
+            label1.Location = new Point(144, 116);
             label1.Name = "label1";
-            label1.Size = new Size(112, 15);
+            label1.Size = new Size(138, 20);
             label1.TabIndex = 28;
             label1.Text = "Ürün Ekleme Formu";
             // 
             // btnRemove
             // 
-            btnRemove.Location = new Point(68, 308);
+            btnRemove.Location = new Point(78, 411);
+            btnRemove.Margin = new Padding(3, 4, 3, 4);
             btnRemove.Name = "btnRemove";
-            btnRemove.Size = new Size(101, 26);
+            btnRemove.Size = new Size(115, 35);
             btnRemove.TabIndex = 29;
             btnRemove.Text = "Sil";
             btnRemove.UseVisualStyleBackColor = true;
@@ -173,26 +171,31 @@
             // 
             // dataGridView2
             // 
+            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView2.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(68, 431);
+            dataGridView2.Location = new Point(536, 64);
+            dataGridView2.Margin = new Padding(3, 4, 3, 4);
             dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(894, 213);
+            dataGridView2.RowHeadersWidth = 51;
+            dataGridView2.Size = new Size(910, 382);
             dataGridView2.TabIndex = 30;
+            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(434, 397);
+            label3.Location = new Point(781, 28);
             label3.Name = "label3";
-            label3.Size = new Size(87, 15);
+            label3.Size = new Size(109, 20);
             label3.TabIndex = 31;
             label3.Text = "Kullanıcı Listesi";
             // 
             // AdminForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1017, 679);
+            ClientSize = new Size(1589, 905);
             Controls.Add(label3);
             Controls.Add(dataGridView2);
             Controls.Add(btnRemove);
@@ -208,7 +211,6 @@
             Controls.Add(label5);
             Controls.Add(label2);
             Controls.Add(txtAd);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "AdminForm";
             Text = "AdminForm";
             Load += AdminForm_Load;
