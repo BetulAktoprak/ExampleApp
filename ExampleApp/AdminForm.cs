@@ -14,27 +14,7 @@ namespace ExampleApp
         private void AdminForm_Load(object sender, EventArgs e)
         {
             LoadProducts();
-            using (var context = new AppDbContext())
-            {
-                var cariList = context.Caris.Include(c => c.Orders)
-                    .ThenInclude(o => o.OrderDetails)
-                    .ThenInclude(od => od.Product)
-                    .Select(c => new
-                    {
-                        c.TCNo,
-                        c.FullName,
-                        c.Email,
-                        c.Phone,
-                        c.CreatedDate,
-                        Products = string.Join(", ",
-                            c.Orders
-                             .SelectMany(o => o.OrderDetails)
-                             .Select(od => od.Product.ProductName)
-                             .Distinct()
-                )
-                    }).ToList();
-                dataGridView2.DataSource = cariList;
-            }
+            
         }
 
         private string CreateBarcode()
@@ -89,7 +69,7 @@ namespace ExampleApp
             }
         }
 
-        private Guid selectedProductId = Guid.Empty;
+        private int selectedProductId = -1;
 
         private void ClearForm()
         {
@@ -97,7 +77,7 @@ namespace ExampleApp
             nmrUnitPrice.Value = 0;
             nmrStock.Value = 0;
             lblBarcode.Text = string.Empty;
-            selectedProductId = Guid.Empty;
+            selectedProductId = -1;
         }
 
         private void LoadProducts()
@@ -130,13 +110,13 @@ namespace ExampleApp
                 nmrStock.Value = Convert.ToInt32(row.Cells["Stock"].Value);
                 nmrUnitPrice.Value = Convert.ToDecimal(row.Cells["UnitPrice"].Value);
 
-                selectedProductId = (Guid)row.Cells["Id"].Value;
+                selectedProductId = Convert.ToInt32(row.Cells["Id"].Value);
             }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (selectedProductId == Guid.Empty)
+            if (selectedProductId == -1)
             {
                 MessageBox.Show("Lütfen güncellenecek bir ürün seçin.");
                 return;
@@ -165,7 +145,7 @@ namespace ExampleApp
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            if (selectedProductId == Guid.Empty)
+            if (selectedProductId == -1)
             {
                 MessageBox.Show("Lütfen silinecek bir ürün seçin.");
                 return;

@@ -1,6 +1,6 @@
 ﻿namespace ExampleApp;
 
-partial class UserRegisterForm
+partial class CustomerForm
 {
     /// <summary>
     /// Required designer variable.
@@ -45,12 +45,16 @@ partial class UserRegisterForm
         btnSave = new Button();
         txtPassword = new TextBox();
         label8 = new Label();
+        dgvCustomerList = new DataGridView();
+        label9 = new Label();
+        btnUpdate = new Button();
+        ((System.ComponentModel.ISupportInitialize)dgvCustomerList).BeginInit();
         SuspendLayout();
         // 
         // label1
         // 
         label1.AutoSize = true;
-        label1.Location = new Point(155, 73);
+        label1.Location = new Point(101, 76);
         label1.Name = "label1";
         label1.Size = new Size(25, 20);
         label1.TabIndex = 0;
@@ -58,7 +62,7 @@ partial class UserRegisterForm
         // 
         // txtTC
         // 
-        txtTC.Location = new Point(201, 73);
+        txtTC.Location = new Point(147, 76);
         txtTC.Margin = new Padding(3, 4, 3, 4);
         txtTC.Name = "txtTC";
         txtTC.Size = new Size(196, 27);
@@ -67,7 +71,7 @@ partial class UserRegisterForm
         // label2
         // 
         label2.AutoSize = true;
-        label2.Location = new Point(122, 256);
+        label2.Location = new Point(68, 259);
         label2.Name = "label2";
         label2.Size = new Size(58, 20);
         label2.TabIndex = 0;
@@ -75,7 +79,7 @@ partial class UserRegisterForm
         // 
         // txtEmail
         // 
-        txtEmail.Location = new Point(201, 201);
+        txtEmail.Location = new Point(147, 204);
         txtEmail.Margin = new Padding(3, 4, 3, 4);
         txtEmail.Name = "txtEmail";
         txtEmail.Size = new Size(196, 27);
@@ -84,7 +88,7 @@ partial class UserRegisterForm
         // label3
         // 
         label3.AutoSize = true;
-        label3.Location = new Point(108, 108);
+        label3.Location = new Point(54, 111);
         label3.Name = "label3";
         label3.Size = new Size(72, 20);
         label3.TabIndex = 0;
@@ -92,7 +96,7 @@ partial class UserRegisterForm
         // 
         // txtFullName
         // 
-        txtFullName.Location = new Point(201, 108);
+        txtFullName.Location = new Point(147, 111);
         txtFullName.Margin = new Padding(3, 4, 3, 4);
         txtFullName.Name = "txtFullName";
         txtFullName.Size = new Size(196, 27);
@@ -101,7 +105,7 @@ partial class UserRegisterForm
         // label4
         // 
         label4.AutoSize = true;
-        label4.Location = new Point(105, 152);
+        label4.Location = new Point(51, 155);
         label4.Name = "label4";
         label4.Size = new Size(75, 20);
         label4.TabIndex = 0;
@@ -109,7 +113,7 @@ partial class UserRegisterForm
         // 
         // txtUsername
         // 
-        txtUsername.Location = new Point(201, 152);
+        txtUsername.Location = new Point(147, 155);
         txtUsername.Margin = new Padding(3, 4, 3, 4);
         txtUsername.Name = "txtUsername";
         txtUsername.Size = new Size(196, 27);
@@ -118,7 +122,7 @@ partial class UserRegisterForm
         // label5
         // 
         label5.AutoSize = true;
-        label5.Location = new Point(113, 310);
+        label5.Location = new Point(59, 313);
         label5.Name = "label5";
         label5.Size = new Size(67, 20);
         label5.TabIndex = 0;
@@ -126,7 +130,7 @@ partial class UserRegisterForm
         // 
         // txtVergiNo
         // 
-        txtVergiNo.Location = new Point(201, 306);
+        txtVergiNo.Location = new Point(147, 309);
         txtVergiNo.Margin = new Padding(3, 4, 3, 4);
         txtVergiNo.Name = "txtVergiNo";
         txtVergiNo.Size = new Size(196, 27);
@@ -135,7 +139,7 @@ partial class UserRegisterForm
         // label6
         // 
         label6.AutoSize = true;
-        label6.Location = new Point(87, 354);
+        label6.Location = new Point(33, 357);
         label6.Name = "label6";
         label6.Size = new Size(93, 20);
         label6.TabIndex = 0;
@@ -144,7 +148,7 @@ partial class UserRegisterForm
         // label7
         // 
         label7.AutoSize = true;
-        label7.Location = new Point(134, 201);
+        label7.Location = new Point(80, 204);
         label7.Name = "label7";
         label7.Size = new Size(46, 20);
         label7.TabIndex = 0;
@@ -152,7 +156,7 @@ partial class UserRegisterForm
         // 
         // txtVergiDairesi
         // 
-        txtVergiDairesi.Location = new Point(201, 350);
+        txtVergiDairesi.Location = new Point(147, 353);
         txtVergiDairesi.Margin = new Padding(3, 4, 3, 4);
         txtVergiDairesi.Name = "txtVergiDairesi";
         txtVergiDairesi.Size = new Size(196, 27);
@@ -160,7 +164,7 @@ partial class UserRegisterForm
         // 
         // txtPhone
         // 
-        txtPhone.Location = new Point(201, 256);
+        txtPhone.Location = new Point(147, 259);
         txtPhone.Margin = new Padding(3, 4, 3, 4);
         txtPhone.Name = "txtPhone";
         txtPhone.Size = new Size(196, 27);
@@ -168,18 +172,19 @@ partial class UserRegisterForm
         // 
         // btnSave
         // 
-        btnSave.Location = new Point(201, 468);
+        btnSave.BackColor = Color.DarkSeaGreen;
+        btnSave.Location = new Point(147, 463);
         btnSave.Margin = new Padding(3, 4, 3, 4);
         btnSave.Name = "btnSave";
         btnSave.Size = new Size(196, 31);
         btnSave.TabIndex = 2;
-        btnSave.Text = "Kayıt Ol";
-        btnSave.UseVisualStyleBackColor = true;
+        btnSave.Text = "Kaydet";
+        btnSave.UseVisualStyleBackColor = false;
         btnSave.Click += btnSave_Click;
         // 
         // txtPassword
         // 
-        txtPassword.Location = new Point(201, 400);
+        txtPassword.Location = new Point(147, 403);
         txtPassword.Margin = new Padding(3, 4, 3, 4);
         txtPassword.Name = "txtPassword";
         txtPassword.Size = new Size(196, 27);
@@ -188,17 +193,54 @@ partial class UserRegisterForm
         // label8
         // 
         label8.AutoSize = true;
-        label8.Location = new Point(141, 407);
+        label8.Location = new Point(87, 410);
         label8.Name = "label8";
         label8.Size = new Size(39, 20);
         label8.TabIndex = 3;
         label8.Text = "Şifre";
         // 
-        // UserRegisterForm
+        // dgvCustomerList
+        // 
+        dgvCustomerList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        dgvCustomerList.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+        dgvCustomerList.BackgroundColor = SystemColors.Control;
+        dgvCustomerList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        dgvCustomerList.Location = new Point(362, 76);
+        dgvCustomerList.Name = "dgvCustomerList";
+        dgvCustomerList.RowHeadersWidth = 51;
+        dgvCustomerList.Size = new Size(1196, 776);
+        dgvCustomerList.TabIndex = 5;
+        dgvCustomerList.KeyDown += dgvCustomerList_KeyDown;
+        // 
+        // label9
+        // 
+        label9.AutoSize = true;
+        label9.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 162);
+        label9.Location = new Point(879, 35);
+        label9.Name = "label9";
+        label9.Size = new Size(125, 23);
+        label9.TabIndex = 6;
+        label9.Text = "Müşteri Listesi";
+        // 
+        // btnUpdate
+        // 
+        btnUpdate.BackColor = Color.Khaki;
+        btnUpdate.Location = new Point(147, 514);
+        btnUpdate.Name = "btnUpdate";
+        btnUpdate.Size = new Size(196, 29);
+        btnUpdate.TabIndex = 7;
+        btnUpdate.Text = "Güncelle";
+        btnUpdate.UseVisualStyleBackColor = false;
+        // 
+        // CustomerForm
         // 
         AutoScaleDimensions = new SizeF(8F, 20F);
         AutoScaleMode = AutoScaleMode.Font;
-        ClientSize = new Size(705, 607);
+        BackColor = SystemColors.InactiveBorder;
+        ClientSize = new Size(1620, 879);
+        Controls.Add(btnUpdate);
+        Controls.Add(label9);
+        Controls.Add(dgvCustomerList);
         Controls.Add(txtPassword);
         Controls.Add(label8);
         Controls.Add(btnSave);
@@ -217,9 +259,10 @@ partial class UserRegisterForm
         Controls.Add(txtTC);
         Controls.Add(label1);
         Margin = new Padding(3, 4, 3, 4);
-        Name = "UserRegisterForm";
-        Text = "UserRegisterForm";
-        Load += UserRegisterForm_Load;
+        Name = "CustomerForm";
+        Text = "CustomerForm";
+        Load += CustomerForm_Load;
+        ((System.ComponentModel.ISupportInitialize)dgvCustomerList).EndInit();
         ResumeLayout(false);
         PerformLayout();
     }
@@ -243,4 +286,7 @@ partial class UserRegisterForm
     private Button btnSave;
     private TextBox txtPassword;
     private Label label8;
+    private DataGridView dgvCustomerList;
+    private Label label9;
+    private Button btnUpdate;
 }

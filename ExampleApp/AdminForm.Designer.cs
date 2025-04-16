@@ -51,12 +51,14 @@
             // 
             // btnSave
             // 
+            btnSave.BackColor = Color.LightSkyBlue;
+            btnSave.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnSave.Location = new Point(317, 411);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(119, 35);
             btnSave.TabIndex = 23;
             btnSave.Text = "Kaydet";
-            btnSave.UseVisualStyleBackColor = true;
+            btnSave.UseVisualStyleBackColor = false;
             btnSave.Click += btnSave_Click;
             // 
             // nmrUnitPrice
@@ -131,6 +133,7 @@
             // 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridView1.BackgroundColor = SystemColors.Control;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(28, 563);
             dataGridView1.Name = "dataGridView1";
@@ -141,38 +144,44 @@
             // 
             // btnUpdate
             // 
+            btnUpdate.BackColor = Color.Yellow;
+            btnUpdate.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnUpdate.Location = new Point(203, 411);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(106, 35);
             btnUpdate.TabIndex = 23;
             btnUpdate.Text = "Güncelle";
-            btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.UseVisualStyleBackColor = false;
             btnUpdate.Click += btnUpdate_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label1.Location = new Point(144, 116);
             label1.Name = "label1";
-            label1.Size = new Size(138, 20);
+            label1.Size = new Size(169, 23);
             label1.TabIndex = 28;
             label1.Text = "Ürün Ekleme Formu";
             // 
             // btnRemove
             // 
+            btnRemove.BackColor = Color.Red;
+            btnRemove.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnRemove.Location = new Point(78, 411);
             btnRemove.Margin = new Padding(3, 4, 3, 4);
             btnRemove.Name = "btnRemove";
             btnRemove.Size = new Size(115, 35);
             btnRemove.TabIndex = 29;
             btnRemove.Text = "Sil";
-            btnRemove.UseVisualStyleBackColor = true;
+            btnRemove.UseVisualStyleBackColor = false;
             btnRemove.Click += btnRemove_Click;
             // 
             // dataGridView2
             // 
             dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView2.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridView2.BackgroundColor = SystemColors.Control;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView2.Location = new Point(536, 64);
             dataGridView2.Margin = new Padding(3, 4, 3, 4);
@@ -185,9 +194,10 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label3.Location = new Point(781, 28);
             label3.Name = "label3";
-            label3.Size = new Size(109, 20);
+            label3.Size = new Size(142, 25);
             label3.TabIndex = 31;
             label3.Text = "Kullanıcı Listesi";
             // 
@@ -195,6 +205,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.InactiveBorder;
             ClientSize = new Size(1589, 905);
             Controls.Add(label3);
             Controls.Add(dataGridView2);

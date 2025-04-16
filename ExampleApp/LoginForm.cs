@@ -26,8 +26,8 @@ public partial class LoginForm : Form
             {
                 if (user.Role == "Admin")
                 {
-                    var adminForm = new AdminForm();
-                    adminForm.ShowDialog();
+                    var menuForm = new MenuForm();
+                    menuForm.ShowDialog();
                     this.DialogResult = DialogResult.OK;
                     this.Close();
                 }
@@ -50,7 +50,7 @@ public partial class LoginForm : Form
 
     private void btnRegister_Click(object sender, EventArgs e)
     {
-        UserRegisterForm registerForm = new UserRegisterForm();
+        CustomerForm registerForm = new CustomerForm();
 
         this.Hide();
         var result = registerForm.ShowDialog();

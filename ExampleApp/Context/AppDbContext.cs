@@ -15,6 +15,18 @@ namespace ExampleApp.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<AppUser>()
+                .HasOne(u => u.Cari)
+                .WithMany(c => c.AppUsers)
+                .HasForeignKey(u => u.CariId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Order>()
+                .HasOne(o => o.Cari)
+                .WithMany(c => c.Orders)
+                .HasForeignKey(o => o.CariId)
+                .OnDelete(DeleteBehavior.Cascade);
+
             modelBuilder.Entity<Product>(builder =>
             {
                 builder.Property(p => p.UnitPrice).HasColumnType("money");

@@ -77,7 +77,7 @@ namespace ExampleApp
                 return;
             }
 
-            Guid selectedProductId = (Guid)cmbProducts.SelectedValue!;
+            var selectedProductId = Convert.ToInt32(cmbProducts.SelectedValue);
             int quantity = (int)nmrAdet.Value;
 
             using (var context = new AppDbContext())

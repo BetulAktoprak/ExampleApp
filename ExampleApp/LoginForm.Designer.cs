@@ -40,6 +40,7 @@ partial class LoginForm
         // 
         // panel1
         // 
+        panel1.BackColor = SystemColors.ControlLightLight;
         panel1.Controls.Add(btnRegister);
         panel1.Controls.Add(label2);
         panel1.Controls.Add(label1);
@@ -54,12 +55,14 @@ partial class LoginForm
         // 
         // btnRegister
         // 
+        btnRegister.BackColor = Color.DarkSeaGreen;
+        btnRegister.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
         btnRegister.Location = new Point(383, 38);
         btnRegister.Name = "btnRegister";
         btnRegister.Size = new Size(94, 29);
         btnRegister.TabIndex = 3;
         btnRegister.Text = "Kayıt Ol";
-        btnRegister.UseVisualStyleBackColor = true;
+        btnRegister.UseVisualStyleBackColor = false;
         btnRegister.Click += btnRegister_Click;
         // 
         // label2
@@ -82,13 +85,15 @@ partial class LoginForm
         // 
         // btnLogin
         // 
-        btnLogin.Location = new Point(288, 221);
+        btnLogin.BackColor = Color.LightBlue;
+        btnLogin.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+        btnLogin.Location = new Point(350, 207);
         btnLogin.Margin = new Padding(3, 4, 3, 4);
         btnLogin.Name = "btnLogin";
         btnLogin.Size = new Size(127, 41);
-        btnLogin.TabIndex = 1;
+        btnLogin.TabIndex = 2;
         btnLogin.Text = "Giriş Yap";
-        btnLogin.UseVisualStyleBackColor = true;
+        btnLogin.UseVisualStyleBackColor = false;
         btnLogin.Click += btnLogin_Click;
         // 
         // txtPassword
@@ -97,7 +102,7 @@ partial class LoginForm
         txtPassword.Margin = new Padding(3, 4, 3, 4);
         txtPassword.Name = "txtPassword";
         txtPassword.Size = new Size(231, 27);
-        txtPassword.TabIndex = 0;
+        txtPassword.TabIndex = 1;
         // 
         // txtUsername
         // 
@@ -111,6 +116,7 @@ partial class LoginForm
         // 
         AutoScaleDimensions = new SizeF(8F, 20F);
         AutoScaleMode = AutoScaleMode.Font;
+        BackColor = SystemColors.GradientActiveCaption;
         ClientSize = new Size(1315, 849);
         Controls.Add(panel1);
         Margin = new Padding(3, 4, 3, 4);
